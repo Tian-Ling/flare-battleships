@@ -13,7 +13,7 @@ namespace battleships.Models
 
         public BattleshipBoard(IEnumerable<IBattleship> battleships)
         {
-            this.Battleships = new IBattleship[BOARD_SIZE, BOARD_SIZE];
+            Battleships = new IBattleship[BOARD_SIZE, BOARD_SIZE];
 
             foreach (var battleship in battleships)
             {
@@ -28,20 +28,28 @@ namespace battleships.Models
                 }
             }
 
-            this.remainingBattleships = battleships.Count();
+            remainingBattleships = battleships.Count();
         }
+
+        public BattleshipBoard()
+        {
+            Battleships = new IBattleship[BOARD_SIZE, BOARD_SIZE];
+        }
+
 
         public void AddBattleship(IBattleship battleship)
         {
             if (!ValidBattleship(battleship))
             {
-                throw new ArgumentException("Battleships cannot overlap with other battleships");
+                throw new ArgumentException("Invalid battleship coordinates");
             }
 
             foreach (var coord in battleship.Coordinates)
             {
-                this.Battleships[coord.X, coord.Y] = battleship;
+                Battleships[coord.X, coord.Y] = battleship;
             }
+
+            remainingBattleships++;
         }
 
         public bool Attack(Coordinate attackCoord)
@@ -54,7 +62,15 @@ namespace battleships.Models
             if (Battleships[attackCoord.X, attackCoord.Y] != null)
             {
                 IBattleship battleship = Battleships[attackCoord.X, attackCoord.Y];
-                if (battleship.Hit(attackCoord) && battleship.IsSunk())
+
+                if (battleship.IsSunk())
+                {
+                    return true;
+                }
+
+
+                battleship.Hit(attackCoord);
+                if (battleship.IsSunk())
                 {
                     remainingBattleships--;
                 }
@@ -85,7 +101,7 @@ namespace battleships.Models
         {
             foreach (Coordinate battleshipCoord in battleship.Coordinates)
             {
-                if (Battleships[battleshipCoord.X, battleshipCoord.Y] != null)
+                if (Battleships[battleshipCoord.X, battleshipCoord.Y] != null || !ValidCoordinate(battleshipCoord))
                 {
                     return false;
                 }

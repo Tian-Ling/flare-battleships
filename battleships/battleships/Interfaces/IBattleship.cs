@@ -8,7 +8,7 @@ namespace battleships.Interfaces
     {
         bool IsSunk();
 
-        bool Hit(Coordinate coord);
+        void Hit(Coordinate coord);
 
         IEnumerable<Coordinate> Coordinates { get; }
     }

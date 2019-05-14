@@ -10,7 +10,8 @@
         "dependencies": {
           "MSTest.TestAdapter": "1.3.2",
           "MSTest.TestFramework": "1.3.2",
-          "Microsoft.NET.Test.Sdk": "15.9.0"
+          "Microsoft.NET.Test.Sdk": "15.9.0",
+          "battleships": "1.0.0"
         },
         "runtime": {
           "battleships-test.dll": {}
@@ -1012,6 +1013,11 @@
             "fileVersion": "1.0.24212.1"
           }
         }
+      },
+      "battleships/1.0.0": {
+        "runtime": {
+          "battleships.dll": {}
+        }
       }
     }
   },
@@ -1510,6 +1516,11 @@
       "sha512": "sha512-gQQaCNO5FYxD37SNQvE+yZUNfCt/Y+FgCnead3hu37RsUiwy2cxqRDWPv+Ee+6DlOeV47xaSYYZ6GQW4EhoEXQ==",
       "path": "system.xml.xpath.xmldocument/4.0.1",
       "hashPath": "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512"
+    },
+    "battleships/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

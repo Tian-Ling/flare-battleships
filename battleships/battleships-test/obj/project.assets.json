@@ -1617,6 +1617,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "battleships/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/battleships.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/battleships.dll": {}
+        }
       }
     }
   },
@@ -5786,6 +5796,11 @@
         "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "battleships/1.0.0": {
+      "type": "project",
+      "path": "../battleships/battleships.csproj",
+      "msbuildProject": "../battleships/battleships.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5793,7 +5808,8 @@
       "MSTest.TestAdapter >= 1.3.2",
       "MSTest.TestFramework >= 1.3.2",
       "Microsoft.NET.Test.Sdk >= 15.9.0",
-      "Microsoft.NETCore.App >= 2.2.0"
+      "Microsoft.NETCore.App >= 2.2.0",
+      "battleships >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5823,7 +5839,11 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/tianling/Documents/Development/flare-battleships/battleships/battleships/battleships.csproj": {
+              "projectPath": "/Users/tianling/Documents/Development/flare-battleships/battleships/battleships/battleships.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

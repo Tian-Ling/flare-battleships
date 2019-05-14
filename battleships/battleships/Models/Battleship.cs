@@ -30,8 +30,7 @@ namespace battleships.Models
             this.hitsRemaining = coords.Count();
         }
 
-        // Returns true if hitting a coordinate that hasn't been hit before, otherwise returns false
-        public bool Hit(Coordinate coord)
+        public void Hit(Coordinate coord)
         {
             if (!hits.ContainsKey(coord))
             {
@@ -41,10 +40,7 @@ namespace battleships.Models
             if (!hits[coord]) {
                 hits[coord] = true;
                 hitsRemaining--;
-                return true;
             }
-
-            return false;
         }
 
         public bool IsSunk()

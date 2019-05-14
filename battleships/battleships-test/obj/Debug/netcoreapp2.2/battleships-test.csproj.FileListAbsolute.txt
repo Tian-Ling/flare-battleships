@@ -12,3 +12,6 @@
 /Users/tianling/Documents/Development/flare-battleships/battleships/battleships-test/obj/Debug/netcoreapp2.2/battleships-test.AssemblyInfo.cs
 /Users/tianling/Documents/Development/flare-battleships/battleships/battleships-test/obj/Debug/netcoreapp2.2/battleships-test.dll
 /Users/tianling/Documents/Development/flare-battleships/battleships/battleships-test/obj/Debug/netcoreapp2.2/battleships-test.pdb
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships-test/bin/Debug/netcoreapp2.2/battleships.dll
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships-test/bin/Debug/netcoreapp2.2/battleships.pdb
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships-test/obj/Debug/netcoreapp2.2/battleships-test.csproj.CopyComplete
