@@ -1,0 +1,46 @@
+﻿<Properties StartupConfiguration="{AB0B646E-75E1-4E1A-B6C0-BDA30174A830}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="battleships/Models/Battleship.cs">
+    <Files>
+      <File FileName="battleships/Models/BattleshipBoard.cs" Line="42" Column="14" />
+      <File FileName="battleships/Models/Battleship.cs" Line="45" Column="14" />
+      <File FileName="battleships/Interfaces/IBattleship.cs" Line="11" Column="36" />
+      <File FileName="battleships/Interfaces/IBoard.cs" Line="13" Column="6" />
+      <File FileName="battleships-test/BattleshipsBasicTest.cs" Line="10" Column="10" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="battleships" expanded="True">
+            <Node name="battleships" expanded="True">
+              <Node name="Interfaces" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Battleship.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="battleships-test" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="battleships" expanded="True">
+            <Node name="battleships-test" expanded="True">
+              <Node name="battleships_test" expanded="True">
+                <Node name="UnitTest1" expanded="True">
+                  <Node name="TestMethod1" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.battleships PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

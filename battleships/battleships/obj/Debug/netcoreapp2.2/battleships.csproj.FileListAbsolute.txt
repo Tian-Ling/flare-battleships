@@ -1,0 +1,11 @@
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships/bin/Debug/netcoreapp2.2/battleships.deps.json
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships/bin/Debug/netcoreapp2.2/battleships.runtimeconfig.json
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships/bin/Debug/netcoreapp2.2/battleships.runtimeconfig.dev.json
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships/bin/Debug/netcoreapp2.2/battleships.dll
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships/bin/Debug/netcoreapp2.2/battleships.pdb
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships/obj/Debug/netcoreapp2.2/battleships.csprojAssemblyReference.cache
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships/obj/Debug/netcoreapp2.2/battleships.csproj.CoreCompileInputs.cache
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships/obj/Debug/netcoreapp2.2/battleships.AssemblyInfoInputs.cache
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships/obj/Debug/netcoreapp2.2/battleships.AssemblyInfo.cs
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships/obj/Debug/netcoreapp2.2/battleships.dll
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships/obj/Debug/netcoreapp2.2/battleships.pdb

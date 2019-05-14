@@ -1,0 +1,14 @@
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships-test/bin/Debug/netcoreapp2.2/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships-test/bin/Debug/netcoreapp2.2/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships-test/bin/Debug/netcoreapp2.2/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships-test/bin/Debug/netcoreapp2.2/battleships-test.deps.json
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships-test/bin/Debug/netcoreapp2.2/battleships-test.runtimeconfig.json
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships-test/bin/Debug/netcoreapp2.2/battleships-test.runtimeconfig.dev.json
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships-test/bin/Debug/netcoreapp2.2/battleships-test.dll
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships-test/bin/Debug/netcoreapp2.2/battleships-test.pdb
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships-test/obj/Debug/netcoreapp2.2/battleships-test.csprojAssemblyReference.cache
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships-test/obj/Debug/netcoreapp2.2/battleships-test.csproj.CoreCompileInputs.cache
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships-test/obj/Debug/netcoreapp2.2/battleships-test.AssemblyInfoInputs.cache
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships-test/obj/Debug/netcoreapp2.2/battleships-test.AssemblyInfo.cs
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships-test/obj/Debug/netcoreapp2.2/battleships-test.dll
+/Users/tianling/Documents/Development/flare-battleships/battleships/battleships-test/obj/Debug/netcoreapp2.2/battleships-test.pdb
