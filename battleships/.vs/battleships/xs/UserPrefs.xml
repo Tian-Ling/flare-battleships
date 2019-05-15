@@ -1,24 +1,22 @@
 ﻿<Properties StartupConfiguration="{AB0B646E-75E1-4E1A-B6C0-BDA30174A830}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="battleships-test/BattleshipsBasicTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="battleships/Models/Coordinate.cs">
     <Files>
-      <File FileName="battleships/Models/BattleshipBoard.cs" Line="54" Column="1" />
-      <File FileName="battleships/Models/Battleship.cs" Line="32" Column="1" />
+      <File FileName="battleships/Models/BattleshipBoard.cs" Line="98" Column="10" />
+      <File FileName="battleships/Models/Battleship.cs" Line="58" Column="116" />
       <File FileName="battleships/Interfaces/IBattleship.cs" Line="11" Column="13" />
       <File FileName="battleships/Interfaces/IBoard.cs" Line="13" Column="6" />
-      <File FileName="battleships-test/BattleshipsBasicTest.cs" Line="30" Column="1" />
+      <File FileName="battleships-test/BattleshipsBasicTest.cs" Line="61" Column="1" />
+      <File FileName="battleships/Models/Coordinate.cs" Line="25" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="battleships" expanded="True">
             <Node name="battleships" expanded="True">
-              <Node name="Interfaces" expanded="True" />
+              <Node name="Interfaces" expanded="True" selected="True" />
               <Node name="Models" expanded="True" />
             </Node>
-            <Node name="battleships-test" expanded="True">
-              <Node name="Dependencies" expanded="True" />
-              <Node name="BattleshipsBasicTest.cs" selected="True" />
-            </Node>
+            <Node name="battleships-test" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -28,7 +26,7 @@
             <Node name="battleships-test" expanded="True">
               <Node name="battleships_test" expanded="True">
                 <Node name="BattleshipsBasicTest" expanded="True">
-                  <Node name="TestCoordinateEquality" selected="True" />
+                  <Node name="TestBattleshipCreation" selected="True" />
                 </Node>
               </Node>
             </Node>

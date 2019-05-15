@@ -8,7 +8,7 @@ namespace battleships.Models
     public class BattleshipBoard : IBoard
     {
         private const int BOARD_SIZE = 10;
-        private int remainingBattleships;
+        public int RemainingBattleships { get; private set; }
         public IBattleship[,] Battleships { get; private set; }
 
         public BattleshipBoard(IEnumerable<IBattleship> battleships)
@@ -28,7 +28,7 @@ namespace battleships.Models
                 }
             }
 
-            remainingBattleships = battleships.Count();
+            RemainingBattleships = battleships.Count();
         }
 
         public BattleshipBoard()
@@ -49,7 +49,7 @@ namespace battleships.Models
                 Battleships[coord.X, coord.Y] = battleship;
             }
 
-            remainingBattleships++;
+            RemainingBattleships++;
         }
 
         public bool Attack(Coordinate attackCoord)
@@ -72,7 +72,7 @@ namespace battleships.Models
                 battleship.Hit(attackCoord);
                 if (battleship.IsSunk())
                 {
-                    remainingBattleships--;
+                    RemainingBattleships--;
                 }
 
                 return true;
@@ -83,7 +83,7 @@ namespace battleships.Models
 
         public bool IsLost()
         {
-            return remainingBattleships == 0;
+            return RemainingBattleships == 0;
         }
 
         private bool ValidCoordinate(Coordinate coord)
@@ -101,7 +101,7 @@ namespace battleships.Models
         {
             foreach (Coordinate battleshipCoord in battleship.Coordinates)
             {
-                if (Battleships[battleshipCoord.X, battleshipCoord.Y] != null || !ValidCoordinate(battleshipCoord))
+                if (!ValidCoordinate(battleshipCoord) || Battleships[battleshipCoord.X, battleshipCoord.Y] != null)
                 {
                     return false;
                 }

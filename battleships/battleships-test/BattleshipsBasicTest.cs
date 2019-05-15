@@ -37,6 +37,7 @@ namespace battleships_test
             List<Coordinate> battleshipCoords = new List<Coordinate> { new Coordinate(0, 0), new Coordinate(0, 1), new Coordinate(0, 2) };
             Battleship battleship = new Battleship(battleshipCoords);
 
+            // Test hitting battleship with invalid coordinates
             Assert.ThrowsException<ArgumentException>(() => battleship.Hit(new Coordinate(-1, -1)));
             Assert.ThrowsException<ArgumentException>(() => battleship.Hit(new Coordinate(0, 3)));
             Assert.ThrowsException<ArgumentException>(() => battleship.Hit(new Coordinate(1, 0)));
@@ -46,5 +47,65 @@ namespace battleships_test
 
             Assert.IsTrue(battleship.IsSunk());
         }
+
+        [TestMethod]
+        public void TestBattleshipBoardCreation()
+        {
+            List<Coordinate> battleship1Coords = new List<Coordinate> { new Coordinate(0, 0), new Coordinate(0, 1), new Coordinate(0, 2) };
+            Battleship battleship1 = new Battleship(battleship1Coords);
+
+            List<Coordinate> battleship2Coords = new List<Coordinate> { new Coordinate(2, 1), new Coordinate(3, 1), new Coordinate(4, 1) };
+            Battleship battleship2 = new Battleship(battleship2Coords);
+
+            BattleshipBoard board = new BattleshipBoard(new List<Battleship> { battleship1, battleship2 });
+
+            Assert.IsTrue(board.RemainingBattleships == 2);
+
+            // Test overlapping ship
+            List<Coordinate> overlappingBattleshipCoords = new List<Coordinate> { new Coordinate(3, 1), new Coordinate(3, 2), new Coordinate(3, 3) };
+            Assert.ThrowsException<ArgumentException>(() => board.AddBattleship(new Battleship(overlappingBattleshipCoords)));
+
+            // Test overlapping ship with illegal coordinates
+            List<Coordinate> overlappingIllegalBattleshipCoords = new List<Coordinate> { new Coordinate(-1, 0), new Coordinate(0, 0), new Coordinate(1, 0) };
+            Assert.ThrowsException<ArgumentException>(() => board.AddBattleship(new Battleship(overlappingIllegalBattleshipCoords)));
+        }
+
+        [TestMethod]
+        public void TestBattleshipBoardAttack()
+        {
+            List<Coordinate> battleship1Coords = new List<Coordinate> { new Coordinate(0, 0), new Coordinate(0, 1), new Coordinate(0, 2) };
+            Battleship battleship1 = new Battleship(battleship1Coords);
+
+            List<Coordinate> battleship2Coords = new List<Coordinate> { new Coordinate(2, 1), new Coordinate(3, 1), new Coordinate(4, 1) };
+            Battleship battleship2 = new Battleship(battleship2Coords);
+
+            BattleshipBoard board = new BattleshipBoard(new List<Battleship> { battleship1, battleship2 });
+
+            // Destroy Battleship1
+            board.Attack(new Coordinate(0, 0));
+            board.Attack(new Coordinate(0, 1));
+            board.Attack(new Coordinate(0, 2));
+
+            Assert.IsTrue(!board.IsLost());
+            Assert.IsTrue(board.RemainingBattleships == 1);
+
+            // Destroy Battleship 2
+            board.Attack(new Coordinate(2, 1));
+            board.Attack(new Coordinate(3, 1));
+            board.Attack(new Coordinate(4, 1));
+
+
+            Assert.IsTrue(board.IsLost());
+            Assert.IsTrue(board.RemainingBattleships == 0);
+
+            // Redestroy Battleship 2
+            board.Attack(new Coordinate(0, 0));
+            board.Attack(new Coordinate(0, 1));
+            board.Attack(new Coordinate(0, 2));
+
+            Assert.IsTrue(board.IsLost());
+            Assert.IsTrue(board.RemainingBattleships == 0);
+        }
+
     }
 }

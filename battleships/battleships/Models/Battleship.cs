@@ -11,7 +11,6 @@ namespace battleships.Models
         private int hitsRemaining;
         public IEnumerable<Coordinate> Coordinates { get; private set; }
 
-
         public Battleship(IEnumerable<Coordinate> coords)
         {
             if (!CheckValidCoords(coords))
@@ -55,6 +54,7 @@ namespace battleships.Models
                 return true;
             }
  
+            // Valid coordinates should only differ in one dimension (i.e. a ship is either horizontal or vertical)
             bool differX = coords.GroupBy(c => c.X).Count() > 1;
             bool differY = coords.GroupBy(c => c.Y).Count() > 1;
 
@@ -63,8 +63,9 @@ namespace battleships.Models
                 return false;
             } else
             {
+                // If the coordinates only differ in one dimension, check that the coordinates form a continuous line
                 IEnumerable<int> sortedCoords = differX ? coords.OrderBy(c => c.X).Select(c => c.X) : coords.OrderBy(c => c.Y).Select(c => c.Y);
-                var prevCoord = sortedCoords.First();
+                int prevCoord = sortedCoords.First();
 
                 foreach (var coord in sortedCoords.Skip(1))
                 {
