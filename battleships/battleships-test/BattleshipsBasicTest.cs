@@ -27,8 +27,13 @@ namespace battleships_test
             List<Coordinate> validYBattleshipCoords = new List<Coordinate> { new Coordinate(2, 1), new Coordinate(2, 3), new Coordinate(2, 2) };
             Battleship battleship1 = new Battleship(validYBattleshipCoords);
 
-            List<Coordinate> invalidBattleshipCoords = new List<Coordinate> { new Coordinate(0, 0), new Coordinate(0, 2), new Coordinate(0, 3) };
-            Assert.ThrowsException<ArgumentException>(() => new Battleship(invalidBattleshipCoords));
+            // Test invalid battleship coordinate with disconnect in y dimension
+            List<Coordinate> invalidYBattleshipCoords = new List<Coordinate> { new Coordinate(0, 0), new Coordinate(0, 2), new Coordinate(0, 3) };
+            Assert.ThrowsException<ArgumentException>(() => new Battleship(invalidYBattleshipCoords));
+
+            // Test invalid battleship coordinate with disconnect in x dimension
+            List<Coordinate> invalidXBattleshipCoords = new List<Coordinate> { new Coordinate(0, 0), new Coordinate(2, 0), new Coordinate(3, 0) };
+            Assert.ThrowsException<ArgumentException>(() => new Battleship(invalidXBattleshipCoords));
         }
 
         [TestMethod]
@@ -98,7 +103,7 @@ namespace battleships_test
             Assert.IsTrue(board.IsLost());
             Assert.IsTrue(board.RemainingBattleships == 0);
 
-            // Redestroy Battleship 2
+            // Redestroy Battleship 2 and check state is still lost
             board.Attack(new Coordinate(0, 0));
             board.Attack(new Coordinate(0, 1));
             board.Attack(new Coordinate(0, 2));
